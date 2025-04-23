@@ -1,0 +1,75 @@
+<!-- signin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In - Note-Making App</title>
+
+  <!-- Google Font and external CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Page wrapper -->
+  <div class="auth-wrapper">
+
+    <!-- Signin form container -->
+    <div class="auth-box">
+      <h2>Welcome Back</h2>
+
+      <!-- Signin form -->
+      <form id="signin-form">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Sign In</button>
+      </form>
+
+      <!-- Link to sign up -->
+      <p class="form-footer">
+        Don't have an account?
+        <a href="signup.html">Sign Up</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("signin-form");
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = form.email.value;
+      const password = form.password.value;
+  
+      try {
+        const res = await fetch("/api/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password })
+        });
+  
+        const data = await res.json();
+        if (res.ok) {
+          // ✅ Store email in localStorage for session simulation
+          localStorage.setItem("loggedInUser", email);
+  
+          alert(data.message);
+          window.location.href = "editor.html";
+        } else {
+          alert(data.error);
+        }
+      } catch (err) {
+        alert("Server error");
+        console.error(err);
+      }
+    });
+  </script>  
+
+</body>
+</html>

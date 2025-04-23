@@ -1,0 +1,391 @@
+/* ================================
+   Global Styles
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: "Noto Sans Indic Siyaq Numbers", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #333;
+    line-height: 1.6;
+    background-color: #aac7ee !important;
+}
+
+/* Scroll control only for editor screen */
+.editor-page {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ================================
+   Header Section
+================================== */
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   Hero Section
+================================== */
+
+.hero {
+    height: 85vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    max-width: 800px;
+    text-shadow: 3px 6px 14px rgba(13, -12, -2, 2.6);
+}
+
+/* ================================
+   Story Section
+================================== */
+
+.story {
+    padding: 60px 40px;
+    max-width: 900px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    
+    /* Paper-like grid background */
+    background-image: radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.story h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+.story p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.story img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    margin: 30px 0;
+}
+
+/* ================================
+   CTA (Call to Action)
+================================== */
+
+.cta {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.cta button {
+    padding: 16px 36px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* ================================
+   Footer
+================================== */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 40px;
+} 
+
+/* ================================
+ Signup / Auth Form Styles
+================================== */
+
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.auth-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-box h2 {
+    margin-bottom: 24px;
+    text-align: center;
+    color: #007bff;
+    font-size: 1.8rem;
+}
+
+.auth-box label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 500;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.auth-box input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.auth-box button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-box button:hover {
+    background-color: #0056b3;
+}
+
+.form-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.form-footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ================================
+ Editor Dashboard Styles
+================================== */
+
+.dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background-color: #1e1e2f;
+    color: #fff;
+    padding: 24px;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+#notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.note-item {
+    padding: 12px 16px;
+    background-color: #aac7ee;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.note-item:hover,
+.note-item.active {
+  background-color: #6a91c5;
+    color: #ebefeb;
+}
+
+#logout-btn {
+    padding: 10px 16px;
+    background: #ff4d4d;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#logout-btn:hover {
+    background: #e60000;
+}
+
+#create-note-btn {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 10px 16px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#create-note-btn:hover {
+    background-color: #218838;
+}
+
+/* Editor Area */
+.editor-area {
+    flex: 1;
+    padding: 40px;
+    background: #aac7ee;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+#note-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 20px;
+    outline: none;
+    width: 100%;
+    border-radius: 8px;
+}
+
+#note-content {
+    flex: 1;
+    padding: 14px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+    margin-bottom: 20px;
+    min-height: 200px;
+}
+
+#note-media {
+    margin-bottom: 16px;
+}
+
+#media-preview img,
+#media-preview video {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #000000;
+}
+
+/* Buttons */
+.editor-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.editor-actions button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.editor-actions button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Specific colors */
+#delete-note {
+    background-color: #ff4d4d;
+}
+
+#delete-note:hover {
+    background-color: #e60000;
+}
+
+#pin-note {
+    background-color: #ff9900;
+}
+
+#pin-note:hover {
+    background-color: #cc7a00;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .dashboard-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+    }
+}

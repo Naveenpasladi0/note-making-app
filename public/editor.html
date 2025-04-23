@@ -1,0 +1,41 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Note Editor - Note-Making App</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+
+  <div class="dashboard-wrapper">
+    
+    <!-- Sidebar -->
+     <aside class="sidebar">
+      <h2>My Notes</h2>
+      <button id="create-note-btn">+ Create New Note</button>
+      <ul id="notes-list">
+        <!-- Notes will be dynamically added here -->
+        </ul>
+        <button id="logout-btn" onclick="logout()">Logout</button>
+    </aside>
+
+    <main class="editor-area">
+      <input type="text" id="note-title" placeholder="Title..." />
+      <textarea id="note-content" placeholder="Write your note here..."></textarea>
+      <div id="media-preview"></div>
+    
+      <div class="editor-actions">
+        <button id="save-note">💾 Save</button>
+        <button id="delete-note">🗑️ Delete</button>
+        <button id="pin-note">📌 Pin</button>
+      </div>
+    </main>    
+
+  </div>
+
+  <script src="editor.js"></script>
+
+</body>
+</html>
