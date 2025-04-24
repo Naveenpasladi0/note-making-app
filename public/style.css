@@ -9,12 +9,14 @@
 }
   
 body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: "Noto Sans Indic Siyaq Numbers", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #333;
     line-height: 1.6;
-    background-color: #aac7ee !important;
+    background-color: #706b99 !important;
 }
 
 /* Scroll control only for editor screen */
@@ -28,8 +30,8 @@ body {
 ================================== */
 
 header {
-    background-color: #222;
-    color: #fff;
+    background-color: #233;
+    color: #f8e4d1;
     padding: 20px 40px;
     text-align: center;
     font-size: 28px;
@@ -67,9 +69,9 @@ header {
     padding: 60px 40px;
     max-width: 900px;
     margin: auto;
-    background-color: #fff;
+    background-color: #706b99;
     border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 10px 50px 80px rgba(0, 0, 0, 0.05);
     
     /* Paper-like grid background */
     background-image: radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px);
@@ -77,9 +79,9 @@ header {
 }
 
 .story h2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
     margin-bottom: 20px;
-    color: #007bff;
+    color: #f8e4d1;
     text-align: center;
 }
 
@@ -108,8 +110,8 @@ header {
 .cta button {
     padding: 16px 36px;
     font-size: 18px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #233;
+    color: #f8e4d1;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -118,7 +120,7 @@ header {
 }
 
 .cta button:hover {
-    background-color: #0056b3;
+    background-color: #222;
     transform: translateY(-2px);
 }
 
@@ -127,11 +129,11 @@ header {
 ================================== */
 
 footer {
-    background-color: #222;
-    color: white;
+    background-color: #233;
+    color: #f8e4d1;
     text-align: center;
     padding: 20px;
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 40px;
 } 
 
@@ -148,7 +150,7 @@ footer {
 }
 
 .auth-box {
-    background-color: #fff;
+    background-color: #706b99;
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -159,7 +161,7 @@ footer {
 .auth-box h2 {
     margin-bottom: 24px;
     text-align: center;
-    color: #007bff;
+    color: #f8e4d1;
     font-size: 1.8rem;
 }
 
@@ -187,7 +189,7 @@ footer {
     width: 100%;
     padding: 14px;
     margin-top: 20px;
-    background-color: #007bff;
+    background-color: #233;
     border: none;
     border-radius: 8px;
     color: #fff;
@@ -197,7 +199,7 @@ footer {
 }
 
 .auth-box button:hover {
-    background-color: #0056b3;
+    background-color: #222;
 }
 
 .form-footer {
@@ -207,7 +209,7 @@ footer {
 }
 
 .form-footer a {
-    color: #007bff;
+    color: #f8e4d1;
     text-decoration: none;
     font-weight: 500;
 }
@@ -224,8 +226,8 @@ footer {
 /* Sidebar */
 .sidebar {
     width: 280px;
-    background-color: #1e1e2f;
-    color: #fff;
+    background-color: #233;
+    color: #f8e4d1;
     padding: 24px;
     overflow-y: auto;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
@@ -246,7 +248,7 @@ footer {
 
 .note-item {
     padding: 12px 16px;
-    background-color: #aac7ee;
+    background-color: #706b99;
     margin-bottom: 10px;
     border-radius: 8px;
     cursor: pointer;
@@ -255,8 +257,8 @@ footer {
 
 .note-item:hover,
 .note-item.active {
-  background-color: #6a91c5;
-    color: #ebefeb;
+    background-color: #f8e4d1;
+    color: black;
 }
 
 #logout-btn {
@@ -264,7 +266,7 @@ footer {
     background: #ff4d4d;
     border: none;
     border-radius: 6px;
-    color: white;
+    color: #f8e4d1;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
@@ -281,21 +283,22 @@ footer {
     background-color: #28a745;
     border: none;
     border-radius: 6px;
-    color: white;
+    color: #f8e4d1;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 #create-note-btn:hover {
-    background-color: #218838;
+    background-color: #f8e4d1;
+    color: black;
 }
 
 /* Editor Area */
 .editor-area {
     flex: 1;
     padding: 40px;
-    background: #aac7ee;
+    background: #706b99;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -350,32 +353,32 @@ footer {
     border: none;
     border-radius: 8px;
     font-weight: bold;
-    background-color: #007bff;
-    color: white;
+    background-color: #233;
+    color: #f8e4d1;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.3s;
 }
 
 .editor-actions button:hover {
-    background-color: #0056b3;
+    background-color: #007bff;
     transform: translateY(-2px);
 }
 
 /* Specific colors */
 #delete-note {
-    background-color: #ff4d4d;
+    background-color: #233;
 }
 
 #delete-note:hover {
-    background-color: #e60000;
+    background-color: #e30000;
 }
 
 #pin-note {
-    background-color: #ff9900;
+    background-color: #233;
 }
 
 #pin-note:hover {
-    background-color: #cc7a00;
+    background-color: #ff9900;
 }
 
 /* Responsive */
